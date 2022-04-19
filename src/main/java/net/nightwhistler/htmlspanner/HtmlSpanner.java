@@ -329,8 +329,13 @@ public class HtmlSpanner {
 
         ContentNode contentNode = (ContentNode) node;
 
+        Log.d("html_spanner", "handleContent: content node = " + contentNode.getContent());
+
         String text = TextUtil.replaceHtmlEntities(
-                contentNode.getContent().toString(), false);
+//                contentNode.getContent().toString(), false);
+                contentNode.getContent().toString(), true);
+
+        Log.d("html_spanner", "handleContent: text after replacement = " + text);
 
         if (isStripExtraWhiteSpace()) {
             //Replace unicode non-breaking space with normal space.

@@ -26,10 +26,13 @@ allprojects {
 }
 
 apply plugin: 'android-library'
+apply plugin: 'maven'
 
 dependencies {
-    compile 'net.sourceforge.htmlcleaner:htmlcleaner:2.16'
-    compile 'com.osbcp.cssparser:cssparser:1.5'
+    implementation 'net.sourceforge.htmlcleaner:htmlcleaner:2.16'
+    // https://mvnrepository.com/artifact/com.osbcp/cssparser
+    implementation 'com.osbcp:cssparser:1.7'
+
 }
 
 android {
